@@ -81,6 +81,9 @@ namespace TrilhaApiDesafio.Controllers
             tarefaBanco.Descricao = tarefa.Descricao;
             tarefaBanco.Data = tarefa.Data;
             tarefaBanco.Status = tarefa.Status;
+
+            _context.Tarefas.Update(tarefaBanco);
+            _context.SaveChanges();
             return Ok();
         }
 
